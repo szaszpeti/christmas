@@ -1,0 +1,16 @@
+{% extends "boldog/base.html" %}
+{% load staticfiles %}
+{% block body_block %}
+<div class="container" align="center">
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <a href="{% url 'boldog:user_login'%}"><button type="button" class="btn btn-primary">KÉREM AZ AJÁNDÉKOT!!!</button></a>
+   <a href="{% url 'boldog:register'%}"><button type="button" class="btn btn-primary">AZÉRT JÓ LENNE VALAMI AJÁNDÉK</button></a>
+
+</div>
+<br><br><br>
+
+{% endblock %}

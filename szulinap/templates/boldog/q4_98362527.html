@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/boldog.css' %}"/>
+   <link href="https://fonts.googleapis.com/css?family=Kalam|Patrick+Hand" rel="stylesheet">
+</head>
+<body id="q1">
+
+
+<div class="container" align="center">
+  <h1>Quiz 3</h1>
+<img src="{% static 'images/q5.gif' %}" />
+
+    <br><br>
+
+     <form method="GET" action="">
+        <input type="text" name="q4" placeholder="pl: gh" value=""/>
+        <input type="submit" value="Válasz küldése"/>
+
+
+    </form>
+
+
+<!--<a href="{% url 'boldog:by'%}"><button type="button" id="ajandek" class="btn btn-primary">VÉTEL VÉGE VE!!!<br>KÉREM KAPCSOLJA KI!!</button></a>
+</div>-->
+
+</body>
+<script
+  src="http://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+</html>
+
+
