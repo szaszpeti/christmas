@@ -5,8 +5,11 @@ from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
-
+from .models import Counter
 # Create your views here.
+
+
+counter = 0
 
 def index(request):
 
@@ -85,6 +88,12 @@ def welcome(request):
 
     return render(request, 'boldog/welcome.html', {'username':usern})
 
+
+@login_required
+def feladat(request):
+
+    return render(request, 'boldog/feladat.html')
+
 @login_required
 def q1(request):
     answere = request.GET.get("q")
@@ -103,31 +112,34 @@ def q2_64738(request):
 
     return render(request, 'boldog/q2_64738.html')
 
+@login_required
 def q3_23491723(request):
     a = request.GET.get("q3")
     print (a)
     if a == "a":
-        return render(request, 'boldog/ajandek.html')
-
+        return HttpResponseRedirect(reverse('boldog:q4_98362527'))
     return render(request, 'boldog/q3_23491723.html')
 
 
-
+@login_required
 def q4_98362527(request):
     a = request.GET.get("q4")
-    print (a)
-    if a == "a":
-        return HttpResponseRedirect(reverse('boldog:q5_74653728'))
 
-    return render(request, 'boldog/q4_98362527.html')
+    global counter
+    if counter < 3:
+        print(counter)
+        if a == "ae":
+            return HttpResponseRedirect(reverse('boldog:ajandek'))
+        else:
+            counter =+ 1
+            return render(request, 'boldog/q4_98362527.html')
 
-def q5_74653728(request):
-    a = request.GET.get("q5")
-    print (a)
-    if a == "a":
-        return HttpResponseRedirect(reverse('boldog:ajandek'))
+    return HttpResponseRedirect(reverse('boldog:failed'))
 
-    return render(request, 'boldog/q5_74653728.html')
+
+def failed(request):
+
+    return render(request, 'boldog/failed.html')
 
 @login_required
 def user_logout(request):

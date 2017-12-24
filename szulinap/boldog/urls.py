@@ -10,11 +10,12 @@ urlpatterns=[
     url(r'^welcome/$',views.welcome,name='welcome'),
     url(r'^user_logout/$',views.user_logout,name='user_logout'),
     url(r'^ajandek/$',views.ajandek,name='ajandek'),
+    url(r'^feladat/$', views.feladat, name='feladat'),
+    url(r'^failed/$', views.failed, name='failed'),
     url(r'^q1/$', views.q1, name='q1'),
     url(r'^q2_64738/$', views.q2_64738, name='q2_64738'),
     url(r'^q3_23491723/$', views.q3_23491723, name='q3_23491723'),
     url(r'^q4_98362527/$', views.q4_98362527, name='q4_98362527'),
-    url(r'^q5_74653728/$', views.q5_74653728, name='q5_74653728'),
     url(r'^by/$',views.by,name='by'),
 
 ]

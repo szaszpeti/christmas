@@ -10,13 +10,30 @@
     <link rel="stylesheet" href="{% static 'css/boldog.css' %}"/>
    <link href="https://fonts.googleapis.com/css?family=Kalam|Patrick+Hand" rel="stylesheet">
 </head>
-<body>
+<body id="welcome">
+
+<br><br><br><br>
 
 
-    <div class="container">
-    {% block body_block %}
-    {% endblock %}
-    </div>
+ <div class="container" align="center">
+<h1> </h1>
+<br><br>
+    <h3>Pár kérdésre kéne válaszolni. <br> Ha megadod a helyes választ (fontos, hogy csak kis betűket használj) akkor <br>
+    automatikusan kapod a következő kérdést, <br> ha nem akkor a válaszod kitörlődik és maradsz az adott kérdésnél és újra próbálhatod maximum 3x.</h3>
+     <br><br>
+     <h3>Ha megcsinálod, akkor talán kapsz ajándékot is!</h3>
+        <br>
+
+         <h3>Viszont ha nem akkor csak két pofont :P!</h3>
+        <br>
+     <br><br>
+
+<a href="{% url 'boldog:q1'%}"><button type="button" class="btn btn-primary">NA HALADJUNK!!!</button></a>
+
+     <br><br>
+    <img src="{% static 'images/dancing.gif' %}"/>
+</div>
+
 
 </body>
 <script
@@ -28,3 +45,6 @@
 
 
 </html>
+
+
+

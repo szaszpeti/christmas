@@ -16,7 +16,7 @@ color:blue;
 /*
  * General styles
  */
-#ajandek {
+ajandek {
     background-color: blue; /* Green */
     border: 3px solid red;
     color: white;
@@ -30,11 +30,11 @@ color:blue;
 }
 h1 {
 font-family: 'Patrick Hand', cursive;
-color:red;}
+color:white;}
 
 h2, h3 {
 font-family: 'Kalam', cursive;
-color:green;}
+color:red;}
 
 
 #welcome{

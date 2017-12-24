@@ -13,3 +13,5 @@ class UserProfileInfo(models.Model):
 
 # Create your models here.
 
+class Counter(models.Model):
+    Quiz = models.SmallIntegerField()
